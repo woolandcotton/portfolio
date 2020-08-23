@@ -1,0 +1,265 @@
+.base-font {
+    font-family: 'Open Sans', sans-serif;   
+}
+.additional-font {
+    font-family: 'PT Serif', serif;
+}
+
+$main-color: #555554;
+$separator-color: #898988;
+$additional-color: #D4C8BE;
+$additional-color-light: #dbd1ca;
+$selection-color: #e8e6e5;;
+$white-color: #ffffff;
+
+$xl-space: 64px;
+$l-space: 32px;
+$m-space: 16px;
+$s-space: 8px;
+$xs-space: 4px;
+$xxs-space: 2px;
+
+@mixin media($media:'xs') {
+    @if $media == 'xxs' {
+      @media screen and (max-width:320px){
+        @content;
+      }
+    }
+    @if $media == 'xs'{
+      @media screen and (max-width:575px){
+        @content;
+      }
+    }
+    @if $media == 'mobile'{
+      @media screen and (max-width:767px){
+        @content;
+      }
+    }
+    @if $media == 'tablet'{
+      @media screen and (max-width:991px){
+        @content;
+      }
+    }
+    @if $media == 'small'{
+      @media screen and (max-width:1199px){
+        @content;
+      }
+    }
+    @if $media == 'large'{
+      @media screen and (max-width:1399px){
+        @content;
+      }
+    }
+    @if $media == 'xl'{
+      @media screen and (max-width:1599px){
+        @content;
+      }
+    }
+    @if $media == 'xxl'{
+        @media screen and (max-width:1799px){
+          @content;
+        }
+      }
+}
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+}
+
+@include keyframes(shine) {
+    from {
+        mask-position: 150%;
+    }   
+    to {
+        mask-position: -50%;
+    }
+}
+
+html {
+    body {
+        margin: 0 $xl-space 0;
+        position:relative; 
+        max-width: 100vw;
+        max-height: 100vh;
+        color: $main-color;
+        // global  styles//
+        ::selection {
+            background-color: $selection-color;
+        }
+        a {
+            text-decoration: none;
+            color: $main-color;
+        }
+        .screen-reader-only {
+            position:absolute;
+            left:-10000px;
+            top:auto;
+            width:1px;
+            height:1px;
+            overflow:hidden;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+        h3  {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin: 0;
+        }
+        p {
+            @extend .base-font;
+            line-height: 1.5;
+        }
+        .mark {
+            font-weight: 500;
+            &.color {
+                background-color: $additional-color-light;
+            }
+        }
+        .section {
+            padding: $l-space 0 $xl-space;
+            @include media('mobile') {
+                padding: $m-space 0 $l-space;
+            }
+        }
+        // end of global styles
+        .title {
+            margin: $m-space 0;
+            h1 {
+                @extend .base-font;
+                text-align: center;
+                font-size: 0.9rem;
+                font-weight: 500;
+                padding: $m-space 0 0 0;
+                margin: 0;
+                letter-spacing: 2px;
+                .wand {
+                    max-height: 32px;
+                    max-width: auto;
+                }
+            }
+        }
+        .intro-container {
+            text-align: center;
+            @extend .additional-font;
+            font-weight: 800;
+            font-style: italic;
+            font-size: 2rem;
+            p {
+                a {
+                    color: $additional-color;
+                    &::selection {
+                        color: $main-color;
+                    }
+                    &:hover {
+                        mask-image: linear-gradient(-85deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+                        mask-size: 200%;
+                        animation: shine 1.5s infinite;
+                    }
+                }
+            }
+        }
+        .main-sections-container {
+            display: flex;
+            @include media('mobile') {
+                display: block;
+            }
+            p {
+                font-weight: 100;
+            }
+            .portfolio-container {
+                flex: 1;
+                margin-left: 2rem;
+                @include media('mobile') {
+                    margin-left: 0;
+                    margin-top: $xl-space;
+                }
+                .work-box {
+                    hr {
+                        display: inline;
+                    }
+                    .number {
+                        @extend .additional-font;
+                        font-weight: 700;
+                    }
+                    .project {
+                        position: relative;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            bottom: 0;
+                            left: 0;
+                            width: 0;
+                            height: 1px;
+                            background-color: #000000;
+                            transition: .4s;
+                        }
+                        &:hover {
+                            &:after {
+                                width: 100%;
+                                transition: .4s;
+                            }
+                        }
+                    }
+                }
+                .small {
+                    font-size: 0.8rem;
+                }
+            }
+            .about-container {
+                margin-right: 2rem;
+                flex: 1;
+                .icon {
+                    margin-left: $m-space;
+                    padding: 0 $xs-space;
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                    &:hover {
+                        background-color: $additional-color;
+                        padding: 0 $xs-space;
+                    }
+                    img {
+                        max-width: 15px;
+                        max-height: auto;
+                    }
+                }
+            }
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            padding-bottom: $xs-space;
+            margin-top: $l-space;
+            @include media('xl') {
+                margin-top: $m-space;
+            }
+            p {
+                font-size: 10px;
+                color: #ffffff;
+                background: $main-color;
+                padding: $s-space; 
+                font-weight: 100;
+            }
+        }          
+    }
+}
