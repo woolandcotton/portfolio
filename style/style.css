@@ -105,9 +105,21 @@ html body .title h1 {
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 575px) {
+  html body .title h1 {
+    font-size: 0.8rem;
+  }
+}
+
 html body .title h1 .wand {
   max-height: 32px;
   max-width: auto;
+}
+
+@media screen and (max-width: 575px) {
+  html body .title h1 .wand {
+    max-height: 24px;
+  }
 }
 
 html body .intro-container {
@@ -115,6 +127,12 @@ html body .intro-container {
   font-weight: 800;
   font-style: italic;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 575px) {
+  html body .intro-container {
+    font-size: 1.5rem;
+  }
 }
 
 html body .intro-container p a {
