@@ -107,7 +107,7 @@ html body .title h1 {
 
 @media screen and (max-width: 575px) {
   html body .title h1 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -118,7 +118,7 @@ html body .title h1 .wand {
 
 @media screen and (max-width: 575px) {
   html body .title h1 .wand {
-    max-height: 24px;
+    max-height: 22px;
   }
 }
 
@@ -131,7 +131,7 @@ html body .intro-container {
 
 @media screen and (max-width: 575px) {
   html body .intro-container {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -170,6 +170,12 @@ html body .main-sections-container {
 
 html body .main-sections-container p {
   font-weight: 100;
+}
+
+@media screen and (max-width: 575px) {
+  html body .main-sections-container p {
+    font-size: 0.9rem;
+  }
 }
 
 html body .main-sections-container .portfolio-container {
@@ -231,6 +237,12 @@ html body .main-sections-container .about-container {
 html body .main-sections-container .about-container .icon {
   margin-left: 16px;
   padding: 0 4px;
+}
+
+@media screen and (max-width: 575px) {
+  html body .main-sections-container .about-container .icon {
+    margin-left: 0;
+  }
 }
 
 html body .main-sections-container .about-container .icon:first-of-type {

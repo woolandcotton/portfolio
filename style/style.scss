@@ -149,13 +149,13 @@ html {
                 margin: 0;
                 letter-spacing: 2px;
                 @include media('xs') {
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                 }
                 .wand {
                     max-height: 32px;
                     max-width: auto;
                     @include media('xs') {
-                        max-height: 24px;
+                        max-height: 22px;
                     }
                 }
             }
@@ -167,7 +167,7 @@ html {
             font-style: italic;
             font-size: 2rem;
             @include media('xs') {
-                font-size: 1.5rem
+                font-size: 1.6rem
             }
             p {
                 a {
@@ -190,6 +190,9 @@ html {
             }
             p {
                 font-weight: 100;
+                @include media('xs') {
+                    font-size: 0.9rem;
+                }
             }
             .portfolio-container {
                 flex: 1;
@@ -237,6 +240,9 @@ html {
                 .icon {
                     margin-left: $m-space;
                     padding: 0 $xs-space;
+                    @include media('xs') {
+                        margin-left: 0;
+                    }
                     &:first-of-type {
                         margin-left: 0;
                     }
