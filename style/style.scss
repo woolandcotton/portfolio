@@ -61,31 +61,23 @@ $xxs-space: 2px;
         }
       }
 }
-@mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-      @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-      @content;
-    }
-    @-ms-keyframes #{$animation-name} {
-      @content;
-    }
-    @-o-keyframes #{$animation-name} {
-      @content;
-    }
-    @keyframes #{$animation-name} {
-      @content;
-    }
-}
 
-@include keyframes(shine) {
+@keyframes shine {
     from {
         mask-position: 150%;
     }   
     to {
         mask-position: -50%;
     }
+}
+
+@keyframes fadeInAnim {
+    0% { 
+        opacity: 0; 
+    }
+    100% { 
+        opacity: 1; 
+    } 
 }
 
 html {
@@ -95,6 +87,9 @@ html {
         max-width: 100vw;
         max-height: 100vh;
         color: $main-color;
+        animation: fadeInAnim ease 1.2s; 
+        animation-iteration-count: 1; 
+        animation-fill-mode: forwards; 
         @include media('xl') {
             margin: 0 $l-space 0;
         }
