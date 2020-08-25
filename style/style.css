@@ -28,36 +28,12 @@
   }
 }
 
-@-webkit-keyframes fadeInAnim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInAnim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 html body {
   margin: 0 64px 0;
   position: relative;
   max-width: 100vw;
   max-height: 100vh;
   color: #555554;
-  -webkit-animation: fadeInAnim ease 1.2s;
-          animation: fadeInAnim ease 1.2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 1599px) {

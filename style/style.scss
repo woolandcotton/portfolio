@@ -71,15 +71,6 @@ $xxs-space: 2px;
     }
 }
 
-@keyframes fadeInAnim {
-    0% { 
-        opacity: 0; 
-    }
-    100% { 
-        opacity: 1; 
-    } 
-}
-
 html {
     body {
         margin: 0 $xl-space 0;
@@ -87,9 +78,6 @@ html {
         max-width: 100vw;
         max-height: 100vh;
         color: $main-color;
-        animation: fadeInAnim ease 1.2s; 
-        animation-iteration-count: 1; 
-        animation-fill-mode: forwards; 
         @include media('xl') {
             margin: 0 $l-space 0;
         }
