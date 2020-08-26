@@ -2,7 +2,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.additional-font, html body .intro-container, html body .main-sections-container .portfolio-container .work-box .number {
+.additional-font, html body .number, html body .intro-container {
   font-family: 'PT Serif', serif;
 }
 
@@ -88,8 +88,12 @@ html body .mark.color {
   background-color: #dbd1ca;
 }
 
+html body .number {
+  font-weight: 700;
+}
+
 html body .section {
-  padding: 32px 0 64px;
+  padding: 32px 0;
 }
 
 @media screen and (max-width: 1599px) {
@@ -201,23 +205,11 @@ html body .main-sections-container .portfolio-container {
   }
 }
 
-html body .main-sections-container .portfolio-container .bolded {
-  font-weight: 500;
-}
-
-html body .main-sections-container .portfolio-container .work-box hr {
-  display: inline;
-}
-
-html body .main-sections-container .portfolio-container .work-box .number {
-  font-weight: 700;
-}
-
-html body .main-sections-container .portfolio-container .work-box .project {
+html body .main-sections-container .portfolio-container .project {
   position: relative;
 }
 
-html body .main-sections-container .portfolio-container .work-box .project:after {
+html body .main-sections-container .portfolio-container .project:after {
   content: "";
   position: absolute;
   display: block;
@@ -230,14 +222,23 @@ html body .main-sections-container .portfolio-container .work-box .project:after
   transition: .4s;
 }
 
-html body .main-sections-container .portfolio-container .work-box .project:hover:after {
+html body .main-sections-container .portfolio-container .project:hover:after {
   width: 100%;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
+html body .main-sections-container .portfolio-container .bolded {
+  font-weight: 500;
+}
+
+html body .main-sections-container .portfolio-container .work-box hr {
+  display: inline;
+}
+
 html body .main-sections-container .portfolio-container .small {
   font-size: 0.8rem;
+  margin-top: 32px;
 }
 
 html body .main-sections-container .about-container {
@@ -286,12 +287,6 @@ html body footer {
   height: auto;
   padding-bottom: 4px;
   margin-top: 32px;
-}
-
-@media screen and (max-width: 1599px) {
-  html body footer {
-    margin-top: 16px;
-  }
 }
 
 html body footer p {

@@ -117,8 +117,12 @@ html {
                 background-color: $additional-color-light;
             }
         }
+        .number, {
+            @extend .additional-font;
+            font-weight: 700;
+        }
         .section {
-            padding: $l-space 0 $xl-space;
+            padding: $l-space 0;
             @include media('xl') {
                 &.intro-container {
                     padding: $m-space 0;
@@ -201,6 +205,26 @@ html {
                     margin-left: 0;
                     margin-top: $xl-space;
                 }
+                .project {
+                    position: relative;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background-color: #000000;
+                        transition: .4s;
+                    }
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                            transition: .4s;
+                        }
+                    }
+                }
                 .bolded {
                     font-weight: 500;
                 }
@@ -208,33 +232,10 @@ html {
                     hr {
                         display: inline;
                     }
-                    .number, {
-                        @extend .additional-font;
-                        font-weight: 700;
-                    }
-                    .project {
-                        position: relative;
-                        &:after {
-                            content: "";
-                            position: absolute;
-                            display: block;
-                            bottom: 0;
-                            left: 0;
-                            width: 0;
-                            height: 1px;
-                            background-color: #000000;
-                            transition: .4s;
-                        }
-                        &:hover {
-                            &:after {
-                                width: 100%;
-                                transition: .4s;
-                            }
-                        }
-                    }
                 }
                 .small {
                     font-size: 0.8rem;
+                    margin-top: $l-space;
                 }
             }
             .about-container {
@@ -268,9 +269,6 @@ html {
             height: auto;
             padding-bottom: $xs-space;
             margin-top: $l-space;
-            @include media('xl') {
-                margin-top: $m-space;
-            }
             p {
                 font-size: 10px;
                 color: #ffffff;
