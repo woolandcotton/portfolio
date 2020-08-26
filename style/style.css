@@ -201,6 +201,10 @@ html body .main-sections-container .portfolio-container {
   }
 }
 
+html body .main-sections-container .portfolio-container .bolded {
+  font-weight: 500;
+}
+
 html body .main-sections-container .portfolio-container .work-box hr {
   display: inline;
 }

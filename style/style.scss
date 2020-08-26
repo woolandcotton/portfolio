@@ -201,11 +201,14 @@ html {
                     margin-left: 0;
                     margin-top: $xl-space;
                 }
+                .bolded {
+                    font-weight: 500;
+                }
                 .work-box {
                     hr {
                         display: inline;
                     }
-                    .number {
+                    .number, {
                         @extend .additional-font;
                         font-weight: 700;
                     }
