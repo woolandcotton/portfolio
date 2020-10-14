@@ -6,30 +6,29 @@
   font-family: 'PT Serif', serif;
 }
 
-@-webkit-keyframes shine {
-  from {
-    -webkit-mask-position: 150%;
-            mask-position: 150%;
-  }
-  to {
-    -webkit-mask-position: -50%;
-            mask-position: -50%;
-  }
+.gradient-effect, html body .intro-container p a {
+  background-image: linear-gradient(120deg, #f7aaef 0%, #F55B74 100%);
+  background-repeat: no-repeat;
+  background-size: 95% 0.2em;
+  background-position: 0 88%;
+  -webkit-transition: background-size 0.25s ease-in;
+  transition: background-size 0.25s ease-in;
 }
 
-@keyframes shine {
-  from {
-    -webkit-mask-position: 150%;
-            mask-position: 150%;
-  }
-  to {
-    -webkit-mask-position: -50%;
-            mask-position: -50%;
-  }
+.gradient-bg, html body .main-sections-container .portfolio-container .project:after, html body .main-sections-container .about-container .icon:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f7aaef), to(#F55B74));
+  background-image: linear-gradient(left, #f7aaef 0%, #F55B74 100%);
+}
+
+.gradient-text, html body .detail, html body .title h1 span, html body footer p {
+  background: -webkit-linear-gradient(left, #f7aaef 0%, #F55B74 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 html body {
-  margin: 0 64px 0;
+  margin: 0 calc(64px + 64px) 0;
   position: relative;
   max-width: 100vw;
   max-height: 100vh;
@@ -43,11 +42,11 @@ html body {
 }
 
 html body ::-moz-selection {
-  background-color: #e8e6e5;
+  background-color: #eaccd0;
 }
 
 html body ::selection {
-  background-color: #e8e6e5;
+  background-color: #eaccd0;
 }
 
 html body a {
@@ -81,19 +80,15 @@ html body p {
 }
 
 html body .mark {
-  font-weight: 500;
-}
-
-html body .mark.color {
-  background-color: #dbd1ca;
+  font-weight: 600;
 }
 
 html body .number {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 html body .section {
-  padding: 32px 0;
+  padding: 16px 0;
 }
 
 @media screen and (max-width: 1599px) {
@@ -112,7 +107,7 @@ html body .title {
 html body .title h1 {
   text-align: center;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 16px 0 0 0;
   margin: 0;
   letter-spacing: 2px;
@@ -121,17 +116,6 @@ html body .title h1 {
 @media screen and (max-width: 575px) {
   html body .title h1 {
     font-size: 0.7rem;
-  }
-}
-
-html body .title h1 .wand {
-  max-height: 32px;
-  max-width: auto;
-}
-
-@media screen and (max-width: 575px) {
-  html body .title h1 .wand {
-    max-height: 22px;
   }
 }
 
@@ -148,25 +132,9 @@ html body .intro-container {
   }
 }
 
-html body .intro-container p a {
-  color: #D4C8BE;
-}
-
-html body .intro-container p a::-moz-selection {
-  color: #555554;
-}
-
-html body .intro-container p a::selection {
-  color: #555554;
-}
-
 html body .intro-container p a:hover {
-  -webkit-mask-image: linear-gradient(-85deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
-          mask-image: linear-gradient(-85deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
-  -webkit-mask-size: 200%;
-          mask-size: 200%;
-  -webkit-animation: shine 1.5s infinite;
-          animation: shine 1.5s infinite;
+  color: #ffffff;
+  background-size: 95% 88%;
 }
 
 html body .main-sections-container {
@@ -182,6 +150,7 @@ html body .main-sections-container {
 }
 
 html body .main-sections-container p {
+  font-size: 0.9rem;
   font-weight: 100;
 }
 
@@ -209,6 +178,10 @@ html body .main-sections-container .portfolio-container .project {
   position: relative;
 }
 
+html body .main-sections-container .portfolio-container .project.bold {
+  font-weight: 400;
+}
+
 html body .main-sections-container .portfolio-container .project:after {
   content: "";
   position: absolute;
@@ -216,8 +189,7 @@ html body .main-sections-container .portfolio-container .project:after {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1px;
-  background-color: #000000;
+  height: 2px;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -228,12 +200,16 @@ html body .main-sections-container .portfolio-container .project:hover:after {
   transition: .4s;
 }
 
-html body .main-sections-container .portfolio-container .bolded {
-  font-weight: 500;
+html body .main-sections-container .portfolio-container .work-box {
+  margin: 32px 0;
 }
 
 html body .main-sections-container .portfolio-container .work-box hr {
   display: inline;
+}
+
+html body .main-sections-container .portfolio-container .cv {
+  margin: 32px 0;
 }
 
 html body .main-sections-container .portfolio-container .small {
@@ -263,11 +239,6 @@ html body .main-sections-container .about-container .icon:first-of-type {
   margin-left: 0;
 }
 
-html body .main-sections-container .about-container .icon:hover {
-  background-color: #D4C8BE;
-  padding: 0 4px;
-}
-
 html body .main-sections-container .about-container .icon img {
   max-width: 15px;
   max-height: auto;
@@ -285,15 +256,20 @@ html body footer {
           align-items: center;
   width: 100%;
   height: auto;
-  padding-bottom: 4px;
   margin-top: 32px;
+}
+
+@media screen and (max-width: 1599px) {
+  html body footer {
+    margin-bottom: 16px;
+  }
 }
 
 html body footer p {
   font-size: 10px;
-  color: #ffffff;
-  background: #555554;
   padding: 8px;
+  margin: 0;
   font-weight: 100;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,10 +6,9 @@
 }
 
 $main-color: #555554;
-$separator-color: #898988;
-$additional-color: #D4C8BE;
-$additional-color-light: #dbd1ca;
-$selection-color: #e8e6e5;;
+$additional-color: #f7aaef;
+$additional-color-dark: #F55B74;
+$selection-color: #eaccd0;
 $white-color: #ffffff;
 
 $xl-space: 64px;
@@ -18,6 +17,23 @@ $m-space: 16px;
 $s-space: 8px;
 $xs-space: 4px;
 $xxs-space: 2px;
+
+.gradient-effect {
+    background-image: linear-gradient(120deg, $additional-color 0%, $additional-color-dark 100%);
+    background-repeat: no-repeat;
+    background-size: 95% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+}
+.gradient-bg {
+    background-image: linear-gradient(left, $additional-color 0%, $additional-color-dark 100%);
+}
+.gradient-text {
+    background: -webkit-linear-gradient(left, $additional-color 0%, $additional-color-dark 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 @mixin media($media:'xxs') {
     @if $media == 'xxs' {
@@ -62,19 +78,10 @@ $xxs-space: 2px;
       }
 }
 
-@keyframes shine {
-    from {
-        mask-position: 150%;
-    }   
-    to {
-        mask-position: -50%;
-    }
-}
-
 html {
     body {
-        margin: 0 $xl-space 0;
-        position:relative; 
+        margin: 0 calc(#{$xl-space} + #{$xl-space}) 0;
+        position: relative; 
         max-width: 100vw;
         max-height: 100vh;
         color: $main-color;
@@ -112,17 +119,17 @@ html {
             line-height: 1.5;
         }
         .mark {
-            font-weight: 500;
-            &.color {
-                background-color: $additional-color-light;
-            }
+            font-weight: 600;
         }
-        .number, {
+        .number {
             @extend .additional-font;
-            font-weight: 700;
+            font-weight: 600;
+        }
+        .detail {
+            @extend .gradient-text;
         }
         .section {
-            padding: $l-space 0;
+            padding: $m-space 0;
             @include media('xl') {
                 &.intro-container {
                     padding: $m-space 0;
@@ -139,25 +146,18 @@ html {
                 @extend .base-font;
                 text-align: center;
                 font-size: 0.9rem;
-                font-weight: 500;
+                font-weight: 600;
                 padding: $m-space 0 0 0;
                 margin: 0;
                 letter-spacing: 2px;
+                span {
+                    @extend .gradient-text;
+                }
                 @include media('l') {
                     font-size: 0.85rem;
                 }
                 @include media('xs') {
                     font-size: 0.7rem;
-                }
-                .wand {
-                    max-height: 32px;
-                    max-width: auto;
-                    @include media('l') {
-                        max-height: 26px;
-                    }
-                    @include media('xs') {
-                        max-height: 22px;
-                    }
                 }
             }
         }
@@ -175,14 +175,10 @@ html {
             }
             p {
                 a {
-                    color: $additional-color;
-                    &::selection {
-                        color: $main-color;
-                    }
+                    @extend .gradient-effect;
                     &:hover {
-                        mask-image: linear-gradient(-85deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-                        mask-size: 200%;
-                        animation: shine 1.5s infinite;
+                        color: $white-color;
+                        background-size: 95% 88%;
                     }
                 }
             }
@@ -193,6 +189,7 @@ html {
                 display: block;
             }
             p {
+                font-size: 0.9rem;
                 font-weight: 100;
                 @include media('xl') {
                     font-size: 0.9rem;
@@ -207,6 +204,9 @@ html {
                 }
                 .project {
                     position: relative;
+                    &.bold {
+                        font-weight: 400;
+                    }
                     &:after {
                         content: "";
                         position: absolute;
@@ -214,8 +214,8 @@ html {
                         bottom: 0;
                         left: 0;
                         width: 0;
-                        height: 1px;
-                        background-color: #000000;
+                        height: 2px;
+                        @extend .gradient-bg;
                         transition: .4s;
                     }
                     &:hover {
@@ -225,13 +225,14 @@ html {
                         }
                     }
                 }
-                .bolded {
-                    font-weight: 500;
-                }
                 .work-box {
+                    margin: $l-space 0;
                     hr {
                         display: inline;
                     }
+                }
+                .cv {
+                    margin: $l-space 0;
                 }
                 .small {
                     font-size: 0.8rem;
@@ -251,8 +252,7 @@ html {
                         margin-left: 0;
                     }
                     &:hover {
-                        background-color: $additional-color;
-                        padding: 0 $xs-space;
+                        @extend .gradient-bg;
                     }
                     img {
                         max-width: 15px;
@@ -267,14 +267,17 @@ html {
             align-items: center;
             width: 100%;
             height: auto;
-            padding-bottom: $xs-space;
             margin-top: $l-space;
+            @include media('xl') {
+                margin-bottom: $m-space;
+            }
             p {
                 font-size: 10px;
-                color: #ffffff;
-                background: $main-color;
                 padding: $s-space; 
+                margin: 0;
                 font-weight: 100;
+                text-transform: uppercase;
+                @extend .gradient-text;
             }
         }          
     }
