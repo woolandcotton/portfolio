@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Magda Obalska – portfolio card</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="manifest" href="./images/site.webmanifest">
+        <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">   
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+
+    <body>
+
+        <h1 role="heading">Magda Obalska
+            <p>UX Designer</p>
+        </h1>
+
+        <section class="project-section">
+
+            <ul class="navigation" role="navigation">
+                <li><a class="hyperlink project" href="./seo-tool.html">Builder App</a></li>
+                <li><a class="hyperlink project" href="./seo-tool.html">SEO Tool</a></li>
+                <li><a class="hyperlink project" href="./website-audit.html">Audyt strony</a></li>
+             </ul>
+            <div class="project-section__wrapper">
+
+                <a class="back" role="button" href="./index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    Powrót
+                </a>
+
+                <h2>Design System</h2>
+
+                <p>Pomysł pojawił się w mojej głowie po kilkunastu rozmowach z deweloperami, którzy korzystają podczas wdrażania aplikacji 
+                    z frameworka Vuetify. Jest to element ograniczający moją pracę, ponieważ nie mogę projektować interfejsów w oderwaniu 
+                    od tego, co można wdrożyć, jednak nie mogę również dopuścić do tego, by interfejs był nieatrakcyjny wizualnie lub nie 
+                    działał poprawnie UX-owo. Zaproponowałam więc stworzenie – kompromisowo – bazy elementów/komponentów, które moglibyśmy 
+                    wykorzystywać w aplikacjach.
+                </p>
+
+            <div class="project-section__wrapper-part">
+                <h3>Problem do rozwiązania/moje zadania</h3>
+                    <p>Założyłam sobie stworzenie bazy wszystkich najczęściej wykorzystywanych w naszych aplikacjach elementów/komponentów 
+                        w taki sposób, aby pokazywać różne ich stany i aby były zgodne z zasadami dostępności.</p>
+            </div>
+
+                <div class="project-section__wrapper-part">
+                    <h3>Kolejne kroki w procesie</h3>
+                    <p>01. Wstępnie określenie tego, co powinno zostać ujęte w projekcie (na podstawie znalezionych referencji).</p>
+                    <p>02. Spisanie założeń i znalezienie narzędzi, które potencjalnie mogłyby być pomocne w procesie tworzenia 
+                        (korzystałam, między innymi, z Leonardo Color od Adobe i Contrast Checker od Heiswayi Nrird).</p>
+                    <p>03. Rozpoczęcie prac nad kolejnymi częściami. Większość założeń i akcji, jakie wykonałam, opisuję poniżej.</p>
+                    <h5>Paleta kolorów:</h5>
+                    <ul>
+                        <li>wybrać kolory dla tekstów tak, aby spełniały standard dostępności AA (współczynnik 4.5:1),</li>
+                        <li>stworzyć ujednolicone nazwy dla kolorów,</li>
+                        <li>stworzyć prosty user guide pod używanie kolorów,</li>
+                        <li>dobrać kolory do elementów/komponentów, gdy te zostaną zaprojektowane, i przetestować kontrast.</li>
+                    </ul>
+                    <figure>
+                        <img class="project-img--6" src="./images/palette.png" alt="paleta kolorów">
+                        <figcaption>Screen z widoku palety kolorów.</figcaption>
+                    </figure>
+                    <h5>Spacing:</h5>
+                    <ul>
+                        <li>tworzyć skalę bazującą na dublowaniu każdego kolejnego kroku,</li>
+                        <li>nazwać każdy krok w tej skali.</li>
+                    </ul>
+                    <h5>Typografia i teksty:</h5>
+                    <ul>
+                        <li>wybrać jeden font do wszystkich aplikacji (kryteria: właściwy kerning, właściwy counter-space liter, 
+                                właściwa wysokość x liter, raczej bezszeryfowy, czytelny w wariancie bold),</li>
+                        <li>pokazać wagi, style i rozmiary dla fontu,</li>
+                        <li>stworzyć prosty user guide pod używanie tekstów,</li>
+                        <li>dopasować teksty do elementów/komponentów, gdy te zostaną zaprojektowane, i przetestować kontrast.</li>
+                    </ul>
+                    <h5>Elementy/komponenty:</h5>
+                    <ul>
+                        <li>stworzyć bibliotekę najczęściej używanych w aplikacjach,</li>
+                        <li>zaprojektować je w harmonii z paletą kolorów, spacingiem, typografią i zasadami dostępności.</li>
+                    </ul>
+                    <p>Krótką prezentację wybranych elementów/komponentów, jakie powstały w procesie, zobaczyć można 
+                        <a href="https://xd.adobe.com/view/576ff532-b479-4b68-7385-78910750515d-215e/" target="_blank" class="hyperlink">tutaj</a>.
+                        <span class="screen-reader-only">(link otwiera się w nowej karcie)</span>
+                    </p>
+                    <h5>Dostępność:</h5>
+                        <ul>
+                            <li>stworzyć listę pożądanych i potrzebnych zachowań dla wszystkich elementów (semantyka, dostęp klawiaturowy, 
+                                atrybuty aria/role) – do weryfikacji z deweloperami.</li>
+                        </ul>
+                        <figure>
+                            <img class="project-img--7" src="./images/accessibility.png" alt="lista kryteriów dostępności">
+                            <figcaption>Screen listy spisanych potencjalnych zachowań.</figcaption>
+                        </figure>
+                    <p>04. System jest już częściowo wdrażany, a wdrażanie będzie miało przebieg iteracyjny. </p>
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="footer">
+                    <p>2020 | Magda Obalska</p>
+                </div>
+            </footer>
+        </section>
+
+    </body>
+
+</html>    

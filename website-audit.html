@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Magda Obalska – portfolio: audyt strony</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="manifest" href="./images/site.webmanifest">
+        <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">   
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+
+    <body>
+
+        <h1 role="heading">Magda Obalska
+            <p>UX Designer</p>
+        </h1>
+
+        <section class="project-section">
+
+            <ul class="navigation" role="navigation">
+                <li><a class="hyperlink project" href="./builder-app.html">Builder App</a></li>
+                <li><a class="hyperlink project" href="./seo-tool.html">SEO Tool</a></li>
+                <li><a class="hyperlink project" href="./design-system.html">Design System</a></li>
+             </ul>
+            <div class="project-section__wrapper">
+
+                <a class="back" role="button" href="./index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    Powrót
+                </a>
+
+                <h2>Audyt strony</h2>
+
+                <p>Przykład przeprowadzenia przeze mnie audytu UX istniejącej strony, w oparciu o wędrówkę poznawczą. Prezentuję tutaj 
+                    zaledwie kilka ze ścieżek, które przeszłam analizując stronę.
+                </p>
+                <p>Pokazuję tutaj również szybki i prosty wywiad z użytkownikiem, który miał przynajmniej odrobinę ograniczyć ewentualną
+                    subiektywność z mojej strony, oraz prezentuję (w formie makiet) szybkie i dość spontaniczne pomysły na poprawę 
+                    doświadczeń.
+                </p>  
+
+            <div class="project-section__wrapper-part">
+                <h3>Wprowadzenie: strona</h3>
+                <p>„Za cel" obrałam sobie stronę Pinterest (pinterest.com), która jest dość prostym, w swoim założeniu, narzędziem
+                    do zbierania i zarządzania materiałami wizualnymi. Powszechnie jest znana jako miejsce do kolekcjonowania inspiracji
+                    i przechowywania ich w tablicach (boards).
+                </p>
+            </div>
+
+                <div class="project-section__wrapper-part">
+                    <h3>Wędrówka poznawcza: wybrane kroki</h3>
+                    <p>Każdy krok użytkownika, który powzięłam, był weryfikowany na podstawie 4 pytań:</p>
+                    <ul>
+                        <li>Czy użytkownik będzie wiedział, jak rozpocząć akcję?</li>
+                        <li>Czy użytkownik dostrzeże elementy interfejsu, które pozwolą mu zrealizować tę akcję?</li>
+                        <li>Czy użytkownik zrozumie, że akcja może być wykonania przy użyciu dostrzeżonych elementów?</li>
+                        <li>Czy użytkownik otrzyma, po wykonaniu akcji, zwrotkę od systemu?</li>
+                    </ul>
+                    <h4>Krok 1. Cel użytkownika: wyświetlić swoje tablice</h4>
+                    <p>Aktualna ścieżka: strona startowa –> wyświetlenie profilu z tablicami (po kliknięciu w awatar)</p>
+                    <p>Przejście ze strony startowej do profilu z tablicami wydaje się być intuicyjne, ale być może powinno być oznaczone
+                        bardziej widocznym wskaźnikiem. Awatar, umieszczony w pasku górnym, po prawej stronie, jest widoczny, jednak nieco
+                        ginie ze względu na niewielki rozmiar. Użytkownik, w mojej opinii, może nie być do konca pewien, czy awatar przenosi do
+                        samego profilu czy do profilu z tablicami. Po kliknięciu w awatar użytkownik natychmiast zostaje przeniesiony na podstronę
+                        profilu i tablic, a sam awatar zostaje oznaczony czarną ramką (to znaczy: jest aktywny).</p>
+                    </p>
+                    <figure>
+                        <img class="project-img--8" src="./images/pinterest-boards.png" alt="widok profilu i wszystkich tablic użytkownika">
+                        <figcaption>Screen widoku profilu użytkownika i jego tablic.</figcaption>
+                    </figure>
+                    <h4>Krok 2. Cel użytkownika: zmienić (posortować) widok tablic</h4>
+                    <p>Aktualna ścieżka: profil z tablicami –> przejście do opcji wyświetlania tablic (po kliknięciu w ikonę sortowania) –>
+                        wybranie opcji z listy
+                    </p>
+                    <p>Ikona zmiany widoku może nie być widoczna na pierwszy rzut oka (szczególnie na większych rozdzielczościach), ze 
+                        względu na umiejscowienie jej blisko krawędzi viewportu. Może być również nierozpoznawalna – została użyta 
+                        ikona wyrównywania (tzw. equalizer) zamiast ikony sortowania lub ustawień. Kliknięcie w ikonę otwiera okno z opcjami,
+                        aktualnie aktywna opcja jest oznaczona „ptaszkiem" a sama ikona zostaje dostaje zmianę tła i koloru (to znaczy:
+                        jest aktywna). Po wybraniu opcji strona się przeładowuje.
+                    </p>
+                    <h4>Krok 3. Cel: udostępnić swój profil poza Pinterestem</h4>
+                    <p>Aktualna ścieżka: profil z tablicami -> przejście do opcji udostępniania profilu (po kliknięciu w ikonę eksportu)
+                        -> wybranie opcji: aplikacji (np. Facebooka)/sugerowanych Pinnerów (innych użytkowników)/wpisanie maila
+                    </p>
+                    <p>Ikona udostępniania może nie być widoczna na pierwszy rzut oka (szczególnie na większych rozdzielczościach), ze 
+                        względu na umiejscowienie jej blisko krawędzi viewportu. Ikona może również nie być oczywista, ale zakładam, 
+                        że użytkownik jednak domyśli się, po co ona jest (zostala użyta ikona eksportu zamiast ikony udostępniania).
+                        Kliknięcie w ikonę otwiera okienko z listą opcji. Nie ma potwierdzenia po wysłaniu profilu przy użyciu aplikacji 
+                        i maila. Udostępnienie wysłaniem do sugerowanych użytkowników jest natomiast zaznaczone na liście.</p>
+                    <h4>Krok 4. Cel: utworzyć nową tablicę</h4>
+                    <p>Aktualna ścieżka: profil z tablicami -> wyświetlenie opcji dodawania (po kliknięciu w ikonę plusa) -> wybranie opcji
+                        dodawania tablicy -> uzupełnienie danych -> stworzenie tablicy (po kliknięciu w przycisk „Create")</p>
+                    <p>Przebywanie na podstronie profilu z tablicami wydaje się, intuicyjnie, być właściwym miejscem do stworzenia
+                        tablicy. Ikona do tworzenia tablicy może nie być widoczna na pierwszy rzut oka (szczególnie na większych rozdzielczościach), ze 
+                        względu na umiejscowienie jej blisko krawędzi viewportu i to najbardziej po prawej stronie. Dodatkowo widoczny
+                        jest tzw. fixed button, który wygląda prawie tak samo (ma ikonę plusa), co może być kłopotliwe dla użytkownika
+                        („Zduplikowany przycisk do dodawania? Dlaczego?"; jeden przycisk służy tylko do dodawania Pinów, drugi – i 
+                        do dodawania Pinów, i do dodawania tablic). W trakcie wypełniania danych o tablicy użytkownik może zobaczyć
+                        inputy z labelami i placeholderami, co jest pomocne (choć labele mogłbyby być, moim zdaniem, troszkę bardziej 
+                        objaśniające). Po dodaniu tablicy strona się przeładowuje, co jest sygnałem, że tablica została utworzona. Pojawia się
+                        okno, pokazujące sugerowane pierwsze Piny (materiały wizualne) dla tablicy (co może być dla użytkownika nieco zaskakujące,
+                        zwłaszcza przy pierwszym utworzeniu). Po kliknięciu w przycisk „Done" pokazuje się kolejne okienko, pokazujące utworzoną
+                        tablicę.
+                    </p>
+                    <figure>
+                        <img class="project-img--9" src="./images/pinterest-boards-plus.png" alt="widok profilu i wszystkich tablic użytkownika z 
+                        aktywną górną ikoną plusa">
+                        <figcaption>Screen z widoku profilu użytkownika i wszystkich jego tablic, z klikniętą górną ikoną plusa.</figcaption>
+                    </figure>
+                    <h4>Krok 5. Cel użytkownika: dodać nowego Pina z poziomu widoku tablicy</h4>
+                    <p>Aktualna ścieżka: profil z tablicami -> wyświetlenie zawartości tablicy (po dwukrotnym kliknięciu w nią) ->
+                        -> wyświetlenie opcji dodawania (przez kliknięcie w button z ikoną plusa) -> wybranie opcji dodawania Pina ->
+                        otwarcie nowej podstrony do tworzenia Pina -> uzupełnienie danych -> zapisanie danych (po kliknięciu w przycisk
+                        „Save")/opuszczenie strony(przez kliknięcie w przycisk powrotu w przeglądarce).
+                    </p>
+                    <p>Przebywanie na podstronie konkretnej tablicy jest, intuicyjnie, właściwym miejscem do stworzenia
+                        tablicy. Podobnie, jak w przypadku dodawania tablicy, dość kłopotliwe jest decydowanie o tym, której ikony plusa użyć
+                        do dodania tablicy. Po zapisaniu danych otwiera się okno z potwierdzeniem utworzenia Pina.</p>
+                    <h4>Krok 6. Cel użytkownika: zaproszenie innych osób do współtworzenia tablicy</h4>
+                    <p>Aktualna ścieżka: profil z tablicami -> wyświetlenie zawartości tablicy (po dwukrotnym kliknięciu w nią) -> przejście
+                        do opcji zapraszania ludzi (po kliknięciu w ikonę plusa) -> wybranie opcji: skopiowanie linku do wysłania/wpisanie maila/
+                        zaproszenie sugerowanego Pinnera (innego użytkownika)
+                    </p> 
+                    <p>Jeśli użytkownik nie ma w zamyśle takiego działania, może się nie zorientować, że jest taka opcja. Ikona do wykonania akcji
+                        jest umieszczona w centralnym punkcie viewportu, blisko górnej krawędzi, ale użytkownik może być bardzo zdziwiony kolejnym
+                        przyciskiem z ikoną plusa (bo tak, jest to znowu ikona plusa). Kopiowanie linku jest potwierdzone snackbarem na dole widoku, wysłanie maila nie jest 
+                        potwierdzone, wysłanie do sugerowanych użytkowników jest oznaczone na liście.</p>
+                    </p>
+                    <figure>
+                        <img class="project-img--10" src="./images/pinterest-board.png" alt="widok tablicy użytkownika">
+                        <figcaption>Screen z widoku konkretnej tablicy użytkownika.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="project-section__wrapper-part">
+                    <h3>Test na użytkowniku</h3>
+                    <p>Moim użytkownikiem był 28-letni mężczyzna, który używa mediów społecznościowych, regularnie przegląda materiały
+                        w internecie, używa technologii w dość zaawansowany sposób.</p>
+                    <p>Krótki wywiad miał formę, którą można uznać za częściowo ustrukturyzowaną. Samo badanie użyteczności nie było 
+                        szczególnie sformalizowane (bo całe zadanie jest nieoficjalne i ćwiczeniowe), miało jedynie dać mi odpowiedź na pytanie
+                        o to, czy elementy, które uznałam za konieczne do poprawy, realnie takimi są, a może są inne, których nie dostrzegłam.
+                        Krótkie scenariusze pod testy napisałam tak, by były niesugerujące i żeby zmuszały do realnego wykonania czynności. Zadania były
+                        wykonywane przed badanego na jego własnym komputerze, na udostępnionym przeze mnie koncie.
+                        Co chciałam przetestować?</p>
+                    <ol>
+                        <li>Czy użytkownik wie, jak wyświetlić swoje tablice?</li>
+                        <li>Czy użytkownik jest zdziwiony zduplikowaną ikoną plusa na podstronie swojego profilu?</li>
+                        <li>Czy użytkownik potrafi rozpoznać znaczenie ikony, która reprezentuje sortowanie tablic na podstronie
+                            swojego profilu?</li>
+                        <li>Czy użytkownik wie, jak dodać Pina z poziomu tablicy?</li>
+                        <li>Jak użytkownik wykonałby zbiorcze akcje na Pinach z poziomu tablicy?</li>    
+                    </ol>
+                    <h4>Pytania/zadania i odpowiedzi</h4>
+                    <p><span class="qa">Pytanie:</span> czy i jakich narzędzi używasz do zapisywania interesujących lub inspirujących Cię materiałów z internetu?
+                        (pytanie neutralne, wprost, pierwszoplanowe)</br>
+                        <span class="qa">Odpowiedź:</span> użytkownik odpowiedział, że zapisuje grafiki/zdjęcia po prostu na swoim smartfonie, a wideo/filmy
+                        zachowuje jako linki lub zakładki w przeglądarce.</p>
+                    <p><span class="qa">Pytanie:</span> czy używałeś kiedykolwiek Pinteresta? (pytanie neutralne, wprost, drugoplanowe)</br>
+                        <span class="qa">Odpowiedź:</span> użytkownik odpowiedział, że zdarzało mu się przeglądać, ale bardziej przypadkowo i nie jako zalogowany
+                        użytkownik, z kontem.</p>
+                    <p><span class="qa">Pytanie:</span> czy wiesz, do czego służy Pinterest? (pytanie neutralne, wprost, drugoplanowe)</br>
+                    <span class="qa">Odpowiedź:</span> użytkownik odpowiedział, że Pinterest służy do kolekcjonowania inspiracji.</p>
+                    <p><span class="qa">Zadanie:</span> z poziomu strony startowej – pokaż, w jaki sposób dostałbyś się do miejsca, gdzie 
+                        wyświetlone są Twoje tablice.</br> 
+                    <span class="qa">Odpowiedź (rezultat):</span> pierwszą próbą było kliknięcie w ikonę strzałki w dół, umieszczonej obok awataru, najbardziej po prawej
+                        stronie paska górnego. Kolejną próbą było kliknięcie w awatar. Użytkownik, zapytany po wykonaniu zadania o to,
+                        co skłoniło go do kliknięcia najpierw w strzałkę, odpowiedział, że uznał, że może znajdzie tam opcję w stylu
+                        „moje tablice". Po zweryfikowaniu szybko „przesiadł" się na awatar, który uznał za przejście do profilu.</p>
+                    <p><span class="qa">Zadanie:</span> z poziomu widoku tablic – powiedz, jak uważasz, do czego służą ikony plusa umieszczone w tym widoku, przy prawej
+                        krawędzi?</br>
+                        <span class="qa">Odpowiedź (rezultat):</span> użytkownik natychmiast odpowiedział, że wyżej umieszczona ikona służy do dodawania tablicy, ale był
+                        zdezorientowany, co do drugiej, i do momentu kliknięcia w nią nie zakładał, że służy właściwie do tego samego.</p>
+                    <p><span class="qa">Zadanie:</span> z poziomu widoku tablic – powiedz, jak myślisz, do czego służy ikona, która została
+                        umieszczona najbliżej lewej krawędzi, tuż nad tablicami?
+                    </br>  
+                    <span class="qa">Odpowiedź (rezultat):</span> użytkownik odpowiedział, że prawdopodobnie do modyfikowania widoku lub filtrowania tablic –
+                        generalnie do jakiegoś rodzaju zmian w sposobie wyświetlania tablic.
+                    </p>
+                    <p><span class="qa">Zadanie:</span> z poziomu widoku tablic – wejdź w widok którejś tablicy i dodaj do niej Pin.</br>
+                        <span class="qa">Odpowiedź (rezultat):</span> użytkownik bez problemu wszedł w tablicę, klikając w nią dwa razy. Pierwszą próbą było 
+                        kliknięcie w ikonę plusa, która służy do zapraszania ludzi do współpracy. Po przescrollowaniu niżej użytkownik
+                        zauważył floating button, który pojawił się w dolnym prawym rogu i uznał, że to on słuzy do dodawania Pina, co było
+                        prawdą.</p>
+                    <p><span class="qa">Zadanie:</span> z poziomu widoku tablicy – usuń kilka Pinów na raz.</br>
+                        <span class="qa">Odpowiedź (rezultat):</span> pierwszą próbą było kliknięcie w Pina, sprawdzenie, czy jest wybieralny. Drugą próbą było
+                        sprawdzenie, czy Pina da się przeciągać. Trzecią próbą było kliknięcie na ikonę edycji, widoczną po najechaniu na Pina.
+                        Czwartą (właściwą) opcją było kliknięcie w przycisk „Organise", umieszczony nad Pinami.
+                    </p>
+                </div>
+
+                <div class="project-section__wrapper-part">
+                    <h3>PROPOZYCJE ZMIAN</h3>
+                    <p>Link do makiet, które powstały jako przykładowe możliwości nowych rozwiązań, zobaczyć można 
+                        <a href="https://xd.adobe.com/view/cc1a548f-575b-4405-5123-67549b50d44c-ba2b/" target="_blank" class="hyperlink">tutaj</a>.
+                        <span class="screen-reader-only">(link otwiera się w nowej karcie)</span>
+                    </p>
+                </div>
+
+            </div>    
+
+            <footer>
+                <div class="footer">
+                    <p>2020 | Magda Obalska</p>
+                </div>
+            </footer>            
+        </section>
+
+    </body>
+
+</html>    
