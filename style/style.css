@@ -758,8 +758,8 @@ html .project-section .project-section__wrapper-part figure img.project-img--6 {
 }
 
 html .project-section .project-section__wrapper-part figure img.project-img--7 {
-  max-width: 120%;
-  left: -6.5rem;
+  max-width: 110%;
+  left: -6.9rem;
 }
 
 @media screen and (max-width: 991px) {
